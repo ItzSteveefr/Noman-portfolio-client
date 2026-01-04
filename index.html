@@ -240,7 +240,7 @@
       </div>
     </section>
     <!-- WORK -->
-    <section id="work" class="py-20 overflow-hidden reveal-on-scroll">
+    <section id="work" class="py-20 px-4 reveal-on-scroll">
       <div class="text-center mb-10">
         <h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white">
           My Work
@@ -248,50 +248,26 @@
         <div class="w-12 h-1 bg-brand-DEFAULT mx-auto mt-4 rounded-full">
         </div>
       </div>
-      <div class="w-full relative px-2">
-        <div class="carousel-3d-container" id="carousel-container">
-          <div class="text-slate-500 dark:text-slate-400 font-walter animate-pulse">
-            Loading visual magic...
-          </div>
-        </div>
-        <div class="flex justify-center mt-8 gap-4">
-          <button onclick="moveCarousel(-1)"
-            class="nav-arrow-btn w-12 h-12 flex items-center justify-center rounded-full transition relative">
-            <i class="bx bx-chevron-left bx-sm"></i>
-          </button>
-          <button onclick="moveCarousel(1)"
-            class="nav-arrow-btn w-12 h-12 flex items-center justify-center rounded-full transition relative">
-            <i class="bx bx-chevron-right bx-sm"></i>
-          </button>
-        </div>
-      </div>
-    </section>
-    <!-- REVIEWS SLIDER -->
-    <section id="reviews" class="py-20 overflow-hidden reveal-on-scroll">
-      <div class="text-center mb-10">
-        <h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white">
-          What Clients Say
-        </h2>
-        <div class="w-12 h-1 bg-brand-DEFAULT mx-auto mt-4 rounded-full">
-        </div>
-      </div>
-      <div class="w-full relative px-4">
-        <!-- Height ensures visibility -->
-        <div class="reviews-slider-container" id="reviews-container">
-          <div class="text-slate-500 dark:text-slate-400 font-mono text-xs">
-            Fetching feedback...
-          </div>
-        </div>
-        <div class="flex justify-center mt-6 gap-4">
-          <button onclick="moveReview(-1)"
-            class="nav-arrow-btn w-10 h-10 flex items-center justify-center rounded-full transition relative">
-            <i class="bx bx-left-arrow-alt"></i>
-          </button>
-          <button onclick="moveReview(1)"
-            class="nav-arrow-btn w-10 h-10 flex items-center justify-center rounded-full transition relative">
-            <i class="bx bx-right-arrow-alt"></i>
-          </button>
-        </div>
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="work-grid">
+        <!-- Work items will be injected here by main.js -->
+        <a href="#" class="work-item">
+          <img src="https://placehold.co/1280x720/7B1E3A/FFFFFF?text=Work+1" alt="Work 1" class="w-full h-full object-cover">
+        </a>
+        <a href="#" class="work-item">
+          <img src="https://placehold.co/1280x720/A82A4F/FFFFFF?text=Work+2" alt="Work 2" class="w-full h-full object-cover">
+        </a>
+        <a href="#" class="work-item">
+          <img src="https://placehold.co/1280x720/E0436C/FFFFFF?text=Work+3" alt="Work 3" class="w-full h-full object-cover">
+        </a>
+         <a href="#" class="work-item">
+          <img src="https://placehold.co/1280x720/7B1E3A/FFFFFF?text=Work+4" alt="Work 4" class="w-full h-full object-cover">
+        </a>
+        <a href="#" class="work-item">
+          <img src="https://placehold.co/1280x720/A82A4F/FFFFFF?text=Work+5" alt="Work 5" class="w-full h-full object-cover">
+        </a>
+        <a href="#" class="work-item">
+          <img src="https://placehold.co/1280x720/E0436C/FFFFFF?text=Work+6" alt="Work 6" class="w-full h-full object-cover">
+        </a>
       </div>
     </section>
     <!-- PRICING -->
