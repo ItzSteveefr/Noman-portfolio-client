@@ -1,363 +1,560 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Noman | Professional Minecraft Thumbnail Designer</title>
+        <meta
+            name="description"
+            content="Professional Minecraft thumbnail designer with 3+ years of experience. I create high-CTR visuals to boost your channel's growth. Affordable pricing from $2-$5."
+        />
+        <link rel="icon" type="image/png" href="pfp.png" />
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            brand: {
+                                DEFAULT: "#7B1E3A",
+                                dark: "#A82A4F",
+                                glow: "#E0436C",
+                            },
+                            dark: {
+                                bg: "#1a1b26",
+                                card: "#242535",
+                                border: "#3c3d5e",
+                            },
+                        },
+                        fontFamily: {
+                            sans: ["Inter", "sans-serif"],
+                            display: ["Outfit", "sans-serif"],
+                            walter: ['"Walter Turncoat"', "cursive"],
+                        },
+                        animation: {
+                            float: "float 6s ease-in-out infinite",
+                        },
+                        keyframes: {
+                            float: {
+                                "0%, 100%": { transform: "translateY(0)" },
+                                "50%": { transform: "translateY(-10px)" },
+                            },
+                        },
+                    },
+                },
+            };
+        </script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noman | Professional Minecraft Thumbnail Designer</title>
-  <meta name="description"
-    content="Professional Minecraft thumbnail designer with 3+ years of experience. I create high-CTR visuals to boost your channel's growth. Affordable pricing from $2-$5." />
-  <link rel="icon" type="image/png" href="./public/Untitled69.jpg" />
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              DEFAULT: '#7B1E3A',
-              dark: '#A82A4F',
-              glow: '#E0436C',
-            },
-            dark: {
-              bg: '#1a1b26',
-              card: '#242535',
-              border: '#3c3d5e',
-            }
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            display: ['Outfit', 'sans-serif'],
-            walter: ['"Walter Turncoat"', 'cursive'],
-          },
-          animation: {
-            'float': 'float 6s ease-in-out infinite',
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-10px)' }
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@500;700;800&amp;family=Walter+Turncoat&amp;display.swap"
-    rel="stylesheet" />
-  <script src="https://unpkg.com/lucide@latest">
-  </script>
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body class="antialiased selection:bg-brand-DEFAULT selection:text-white overflow-hidden">
-  <!-- STATIC STRIPES BACKGROUND -->
-  <div class="bg-stripes">
-  </div>
-  <!-- SPLASH SCREEN -->
-  <div id="splash-screen">
-    <div class="curtain left">
-    </div>
-    <div class="curtain right">
-    </div>
-    <div class="typing-container">
-      <span id="typing-text"></span>
-      <span class="cursor"></span>
-    </div>
-  </div>
-  <!-- NAVBAR -->
-  <div id="nav-container" class="fixed top-6 left-0 right-0 flex justify-center z-50 px-4">
-    <nav class="nav-pill">
-      <div class="flex items-center justify-start">
-        <span class="font-walter text-brand-DEFAULT font-bold text-lg tracking-tight"> Noman
-        </span>
-      </div>
-      <div class="nav-center-text">
-        Designer
-      </div>
-      <div class="nav-right">
-        <div class="hidden md:flex gap-6">
-          <a href="#hero" class="nav-link active"> Home
-          </a>
-          <a href="#about-me" class="nav-link"> About
-          </a>
-          <a href="#work" class="nav-link"> Work
-          </a>
-          <a href="#reviews" class="nav-link"> Reviews
-          </a>
-          <a href="#pricing" class="nav-link"> Price
-          </a>
+        <!-- Fonts & Icons -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@500;700;800&amp;family=Walter+Turncoat&amp;display.swap"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body
+        class="antialiased selection:bg-brand-DEFAULT selection:text-white overflow-hidden"
+    >
+        <!-- STATIC STRIPES BACKGROUND -->
+        <div class="bg-stripes"></div>
+        <!-- SPLASH SCREEN -->
+        <div id="splash-screen">
+            <div class="curtain left"></div>
+            <div class="curtain right"></div>
+            <div class="typing-container">
+                <span id="typing-text"></span>
+                <span class="cursor"></span>
+            </div>
         </div>
-        <button id="theme-toggle" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
-          <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-yellow-400"></i>
-          <i data-lucide="moon" class="w-5 h-5 block dark:hidden text-slate-600"></i>
-        </button>
-      </div>
-    </nav>
-  </div>
-  <main>
-    <!-- HERO SECTION -->
-    <section id="hero"
-      class="relative min-h-screen w-full flex items-center justify-center overflow-hidden pb-20 pt-32">
-      <div id="main-card" class="hero-card tilt-card w-full max-w-[480px] py-12 px-10 text-center reveal-on-scroll">
-        <div class="absolute -top-12 left-1/2 -translate-x-1/2 tilt-deep">
-          <div
-            class="w-24 h-24 bg-white dark:bg-[#0F1724] rounded-full flex items-center justify-center shadow-xl ring-4 ring-white dark:ring-[#1E293B] overflow-hidden">
-            <img src="./public/Untitled69.jpg" class="w-full h-full object-cover" />
-          </div>
-        </div>
-        <div class="tilt-inner mt-8">
-          <h1 class="font-walter text-5xl font-extrabold text-slate-900 dark:text-white mb-3 tracking-tight">
-            Noman
-          </h1>
-          <div
-            class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-purple-50 dark:bg-purple-500/10 border border-purple-100 dark:border-purple-500/20 mb-6">
-            <span class="text-brand-DEFAULT font-bold text-[11px] uppercase tracking-widest"> Minecraft Thumbnail
-              Designer
-            </span>
-          </div>
-          <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8 text-sm font-medium px-2">
-            I create high-impact Minecraft thumbnails that grab attention and boost your click-through rate. Let's make
-            your content stand out.
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <button class="contact-trigger btn-primary py-3.5 text-xs font-bold uppercase tracking-wider">
-              Contact Me
-            </button>
-            <a href="https://discord.gg/dfg4vg9NQv" target="_blank"
-              class="py-3.5 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 hover:text-black dark:hover:text-white border border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500 rounded-xl transition-all flex items-center justify-center">
-              Join Discord
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ABOUT ME -->
-    <section id="about-me" class="py-20 px-4 relative z-10 reveal-on-scroll">
-      <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white">
-            About Me
-          </h2>
-          <div class="w-12 h-1 bg-brand-DEFAULT mx-auto mt-4 rounded-full">
-          </div>
-        </div>
+        <!-- NAVBAR -->
         <div
-          class="glass-card tilt-card p-8 md:p-12 bg-white/60 dark:bg-[#0F1724]/60 backdrop-blur-md rounded-[2rem] border border-white/20 shadow-xl">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-4">
-                Behind the Pixels
-              </h3>
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 text-sm">
-                Hey! I'm Noman, a professional Minecraft thumbnail designer with over three years of experience. I use
-                Blockbench and Ibis Paint to create custom scenes that make your videos stand out.
-              </p>
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
-                My focus is on creating thumbnails that not only look great but also drive clicks and grow your
-                audience.
-              </p>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-              <div
-                class="bg-purple-50 dark:bg-purple-900/10 p-5 rounded-2xl text-center border border-purple-100 dark:border-purple-500/20">
-                <span class="block text-2xl font-extrabold text-brand-DEFAULT mb-1"> 3+
-                </span>
-                <span class="text-[10px] font-bold uppercase text-slate-500 tracking-wider"> Years Exp
-                </span>
-              </div>
-              <div
-                class="bg-purple-50 dark:bg-purple-900/10 p-5 rounded-2xl text-center border border-purple-100 dark:border-purple-500/20">
-                <span class="block text-2xl font-extrabold text-brand-DEFAULT mb-1"> 100+
-                </span>
-                <span class="text-[10px] font-bold uppercase text-slate-500 tracking-wider"> Projects
-                </span>
-              </div>
-            </div>
-          </div>
+            id="nav-container"
+            class="fixed top-6 left-0 right-0 flex justify-center z-50 px-4"
+        >
+            <nav class="nav-pill">
+                <div class="flex items-center justify-start">
+                    <span
+                        class="font-walter text-brand-DEFAULT font-bold text-lg tracking-tight"
+                    >
+                        Noman
+                    </span>
+                </div>
+                <div class="nav-center-text">Designer</div>
+                <div class="nav-right">
+                    <div class="hidden md:flex gap-6">
+                        <a href="#hero" class="nav-link active"> Home </a>
+                        <a href="#about-me" class="nav-link"> About </a>
+                        <a href="#work" class="nav-link"> Work </a>
+                        <a href="#reviews" class="nav-link"> Reviews </a>
+                        <a href="#pricing" class="nav-link"> Price </a>
+                    </div>
+                    <button
+                        id="theme-toggle"
+                        class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+                    >
+                        <i
+                            data-lucide="sun"
+                            class="w-5 h-5 hidden dark:block text-yellow-400"
+                        ></i>
+                        <i
+                            data-lucide="moon"
+                            class="w-5 h-5 block dark:hidden text-slate-600"
+                        ></i>
+                    </button>
+                </div>
+            </nav>
         </div>
-      </div>
-    </section>
-    <!-- WHY CHOOSE ME -->
-    <section id="why-me" class="py-20 px-4 relative z-10 reveal-on-scroll">
-      <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white">
-            Why Choose Me?
-          </h2>
-          <div class="w-12 h-1 bg-brand-DEFAULT mx-auto mt-4 rounded-full">
-          </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div
-            class="bg-white/50 dark:bg-[#0F1724]/60 backdrop-blur-md p-6 rounded-3xl border border-white/20 dark:border-white/5 shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300">
-            <div
-              class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4 text-brand-DEFAULT">
-              <i data-lucide="zap" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">
-              Fast Delivery
-            </h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">
-              Turnaround times that keep your upload schedule on track.
-            </p>
-          </div>
-          <div
-            class="bg-white/50 dark:bg-[#0F1724]/60 backdrop-blur-md p-6 rounded-3xl border border-white/20 dark:border-white/5 shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300">
-            <div
-              class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4 text-purple-500">
-              <i data-lucide="gem" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">
-              High Quality
-            </h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">
-              Professional blending and rendering that stands out.
-            </p>
-          </div>
-          <div
-            class="bg-white/50 dark:bg-[#0F1724]/60 backdrop-blur-md p-6 rounded-3xl border border-white/20 dark:border-white/5 shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300">
-            <div
-              class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4 text-purple-500">
-              <i data-lucide="message-square" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">
-              Active Support
-            </h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">
-              Clear communication throughout the entire process.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- WORK -->
-    <section id="work" class="py-20 px-4 reveal-on-scroll">
-      <div class="text-center mb-10">
-        <h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white">
-          My Work
-        </h2>
-        <div class="w-12 h-1 bg-brand-DEFAULT mx-auto mt-4 rounded-full">
-        </div>
-      </div>
-      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="work-grid">
-        <!-- Work items will be injected here by main.js -->
-        <a href="#" class="work-item">
-          <img href="./public/1000086162_imgupscaler.ai_Beta_2K.jpg" alt="Work 1" class="w-full h-full object-cover">
-        </a>
-        <a href="#" class="work-item">
-          <img src="https://placehold.co/1280x720/A82A4F/FFFFFF?text=Work+2" alt="Work 2"
-            class="w-full h-full object-cover">
-        </a>
-        <a href="#" class="work-item">
-          <img src="https://placehold.co/1280x720/E0436C/FFFFFF?text=Work+3" alt="Work 3"
-            class="w-full h-full object-cover">
-        </a>
-      </div>
-    </section>
-    <!-- PRICING -->
-    <section id="pricing" class="py-20 px-4 reveal-on-scroll">
-      <div class="max-w-sm mx-auto">
+        <main>
+            <!-- HERO SECTION -->
+            <section
+                id="hero"
+                class="relative min-h-screen w-full flex items-center justify-center overflow-hidden pb-20 pt-32"
+            >
+                <div
+                    id="main-card"
+                    class="hero-card tilt-card w-full max-w-[480px] py-12 px-10 text-center reveal-on-scroll"
+                >
+                    <div
+                        class="absolute -top-12 left-1/2 -translate-x-1/2 tilt-deep"
+                    >
+                        <div
+                            class="w-24 h-24 bg-white dark:bg-[#0F1724] rounded-full flex items-center justify-center shadow-xl ring-4 ring-white dark:ring-[#1E293B] overflow-hidden"
+                        >
+                            <img
+                                src="pfp.png"
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                    </div>
+                    <div class="tilt-inner mt-8">
+                        <h1
+                            class="font-walter text-5xl font-extrabold text-slate-900 dark:text-white mb-3 tracking-tight"
+                        >
+                            Noman
+                        </h1>
+                        <div
+                            class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-purple-50 dark:bg-purple-500/10 border border-purple-100 dark:border-purple-500/20 mb-6"
+                        >
+                            <span
+                                class="text-brand-DEFAULT font-bold text-[11px] uppercase tracking-widest"
+                            >
+                                Minecraft Thumbnail Designer
+                            </span>
+                        </div>
+                        <p
+                            class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8 text-sm font-medium px-2"
+                        >
+                            I create high-impact Minecraft thumbnails that grab
+                            attention and boost your click-through rate. Let's
+                            make your content stand out.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <button
+                                class="contact-trigger btn-primary py-3.5 text-xs font-bold uppercase tracking-wider"
+                            >
+                                Contact Me
+                            </button>
+                            <a
+                                href="https://discord.gg/yourserver"
+                                target="_blank"
+                                class="py-3.5 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 hover:text-black dark:hover:text-white border border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500 rounded-xl transition-all flex items-center justify-center"
+                            >
+                                Join Discord
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ABOUT ME -->
+            <section
+                id="about-me"
+                class="py-20 px-4 relative z-10 reveal-on-scroll"
+            >
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2
+                            class="font-display text-3xl font-bold text-slate-900 dark:text-white"
+                        >
+                            About Me
+                        </h2>
+                        <div
+                            class="w-12 h-1 bg-brand-DEFAULT mx-auto mt-4 rounded-full"
+                        ></div>
+                    </div>
+                    <div
+                        class="glass-card tilt-card p-8 md:p-12 bg-white/60 dark:bg-[#0F1724]/60 backdrop-blur-md rounded-[2rem] border border-white/20 shadow-xl"
+                    >
+                        <div
+                            class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+                        >
+                            <div>
+                                <h3
+                                    class="font-display text-xl font-bold text-slate-900 dark:text-white mb-4"
+                                >
+                                    Behind the Pixels
+                                </h3>
+                                <p
+                                    class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 text-sm"
+                                >
+                                    Hey! I'm Noman, a professional Minecraft
+                                    thumbnail designer with over three years of
+                                    experience. I use Blockbench and Ibis Paint
+                                    to create custom scenes that make your
+                                    videos stand out.
+                                </p>
+                                <p
+                                    class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm"
+                                >
+                                    My focus is on creating thumbnails that not
+                                    only look great but also drive clicks and
+                                    grow your audience.
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div
+                                    class="bg-purple-50 dark:bg-purple-900/10 p-5 rounded-2xl text-center border border-purple-100 dark:border-purple-500/20"
+                                >
+                                    <span
+                                        class="block text-2xl font-extrabold text-brand-DEFAULT mb-1"
+                                    >
+                                        3+
+                                    </span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase text-slate-500 tracking-wider"
+                                    >
+                                        Years Exp
+                                    </span>
+                                </div>
+                                <div
+                                    class="bg-purple-50 dark:bg-purple-900/10 p-5 rounded-2xl text-center border border-purple-100 dark:border-purple-500/20"
+                                >
+                                    <span
+                                        class="block text-2xl font-extrabold text-brand-DEFAULT mb-1"
+                                    >
+                                        50+
+                                    </span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase text-slate-500 tracking-wider"
+                                    >
+                                        Projects
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- WHY CHOOSE ME -->
+            <section
+                id="why-me"
+                class="py-20 px-4 relative z-10 reveal-on-scroll"
+            >
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2
+                            class="font-display text-3xl font-bold text-slate-900 dark:text-white"
+                        >
+                            Why Choose Me?
+                        </h2>
+                        <div
+                            class="w-12 h-1 bg-brand-DEFAULT mx-auto mt-4 rounded-full"
+                        ></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div
+                            class="bg-white/50 dark:bg-[#0F1724]/60 backdrop-blur-md p-6 rounded-3xl border border-white/20 dark:border-white/5 shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300"
+                        >
+                            <div
+                                class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4 text-brand-DEFAULT"
+                            >
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <h3
+                                class="font-bold text-lg mb-2 text-slate-900 dark:text-white"
+                            >
+                                Fast Delivery
+                            </h3>
+                            <p
+                                class="text-sm text-slate-600 dark:text-slate-400"
+                            >
+                                Turnaround times that keep your upload schedule
+                                on track.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white/50 dark:bg-[#0F1724]/60 backdrop-blur-md p-6 rounded-3xl border border-white/20 dark:border-white/5 shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300"
+                        >
+                            <div
+                                class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4 text-purple-500"
+                            >
+                                <i data-lucide="gem" class="w-6 h-6"></i>
+                            </div>
+                            <h3
+                                class="font-bold text-lg mb-2 text-slate-900 dark:text-white"
+                            >
+                                High Quality
+                            </h3>
+                            <p
+                                class="text-sm text-slate-600 dark:text-slate-400"
+                            >
+                                Professional blending and rendering that stands
+                                out.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white/50 dark:bg-[#0F1724]/60 backdrop-blur-md p-6 rounded-3xl border border-white/20 dark:border-white/5 shadow-lg text-center hover:transform hover:scale-105 transition-all duration-300"
+                        >
+                            <div
+                                class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4 text-purple-500"
+                            >
+                                <i
+                                    data-lucide="message-square"
+                                    class="w-6 h-6"
+                                ></i>
+                            </div>
+                            <h3
+                                class="font-bold text-lg mb-2 text-slate-900 dark:text-white"
+                            >
+                                Active Support
+                            </h3>
+                            <p
+                                class="text-sm text-slate-600 dark:text-slate-400"
+                            >
+                                Clear communication throughout the entire
+                                process.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- WORK -->
+            <section id="work" class="py-20 overflow-hidden reveal-on-scroll">
+                <div class="text-center mb-10">
+                    <h2
+                        class="font-display text-3xl font-bold text-slate-900 dark:text-white"
+                    >
+                        My Work
+                    </h2>
+                    <div
+                        class="w-12 h-1 bg-brand-DEFAULT mx-auto mt-4 rounded-full"
+                    ></div>
+                </div>
+                <div class="w-full relative px-2">
+                    <div class="carousel-3d-container" id="carousel-container">
+                        <div
+                            class="text-slate-500 dark:text-slate-400 font-walter animate-pulse"
+                        >
+                            Loading visual magic...
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-8 gap-4">
+                        <button
+                            onclick="moveCarousel(-1)"
+                            class="nav-arrow-btn w-12 h-12 flex items-center justify-center rounded-full transition relative"
+                        >
+                            <i class="bx bx-chevron-left bx-sm"></i>
+                        </button>
+                        <button
+                            onclick="moveCarousel(1)"
+                            class="nav-arrow-btn w-12 h-12 flex items-center justify-center rounded-full transition relative"
+                        >
+                            <i class="bx bx-chevron-right bx-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- REVIEWS SLIDER -->
+            <section
+                id="reviews"
+                class="py-20 overflow-hidden reveal-on-scroll"
+            >
+                <div class="text-center mb-10">
+                    <h2
+                        class="font-display text-3xl font-bold text-slate-900 dark:text-white"
+                    >
+                        What Clients Say
+                    </h2>
+                    <div
+                        class="w-12 h-1 bg-brand-DEFAULT mx-auto mt-4 rounded-full"
+                    ></div>
+                </div>
+                <div class="w-full relative px-4">
+                    <!-- Height ensures visibility -->
+                    <div
+                        class="reviews-slider-container"
+                        id="reviews-container"
+                    >
+                        <div
+                            class="text-slate-500 dark:text-slate-400 font-mono text-xs"
+                        >
+                            Fetching feedback...
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-6 gap-4">
+                        <button
+                            onclick="moveReview(-1)"
+                            class="nav-arrow-btn w-10 h-10 flex items-center justify-center rounded-full transition relative"
+                        >
+                            <i class="bx bx-left-arrow-alt"></i>
+                        </button>
+                        <button
+                            onclick="moveReview(1)"
+                            class="nav-arrow-btn w-10 h-10 flex items-center justify-center rounded-full transition relative"
+                        >
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- PRICING -->
+            <section id="pricing" class="py-20 px-4 reveal-on-scroll">
+                <div class="max-w-sm mx-auto">
+                    <div
+                        class="glass-card tilt-card p-8 text-center relative overflow-hidden bg-white/60 dark:bg-[#0F1724]/60 rounded-[2rem]"
+                    >
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-brand-DEFAULT opacity-10 blur-[60px] pointer-events-none"
+                        ></div>
+                        <h2
+                            class="font-display text-5xl font-bold mb-3 text-slate-900 dark:text-white tilt-inner"
+                        >
+                            Pricing
+                        </h2>
+                        <p
+                            class="text-[10px] text-brand-DEFAULT uppercase tracking-widest font-bold mb-8 tilt-inner"
+                        >
+                            Starting at $2 - $5 USD
+                        </p>
+                        <p
+                            class="text-sm text-slate-600 dark:text-slate-400 mb-8 leading-relaxed tilt-inner"
+                        >
+                            Every project is unique. I provide custom quotes
+                            based on complexity and bulk orders.
+                        </p>
+                        <button
+                            class="contact-trigger btn-primary w-full py-4 rounded-xl font-bold text-sm tilt-inner uppercase tracking-wide"
+                        >
+                            Request Quote
+                        </button>
+                        <div
+                            class="flex justify-center gap-6 mt-8 opacity-50 tilt-inner"
+                        >
+                            <div
+                                class="flex items-center gap-2 text-[10px] font-bold text-slate-600 dark:text-slate-300"
+                            >
+                                <i data-lucide="credit-card" size="14"></i>
+                                PayPal
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer
+            class="py-8 text-center text-xs text-slate-500 dark:text-slate-600 border-t border-slate-200 dark:border-slate-900/50"
+        >
+            © 2025 Noman Designs.
+        </footer>
+        <!-- Contact Modal -->
         <div
-          class="glass-card tilt-card p-8 text-center relative overflow-hidden bg-white/60 dark:bg-[#0F1724]/60 rounded-[2rem]">
-          <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-brand-DEFAULT opacity-10 blur-[60px] pointer-events-none">
-          </div>
-          <h2 class="font-display text-5xl font-bold mb-3 text-slate-900 dark:text-white tilt-inner">
-            Pricing
-          </h2>
-          <p class="text-[10px] text-brand-DEFAULT uppercase tracking-widest font-bold mb-8 tilt-inner">
-            Starting at 100 INR
-          </p>
-          <p class="text-sm text-slate-600 dark:text-slate-400 mb-8 leading-relaxed tilt-inner">
-            Every project is unique. I provide custom quotes based on complexity and bulk orders.
-          </p>
-          <button
-            class="contact-trigger btn-primary w-full py-4 rounded-xl font-bold text-sm tilt-inner uppercase tracking-wide">
-            Request Quote
-          </button>
-          <div class="flex justify-center gap-6 mt-8 opacity-50 tilt-inner">
-            <div class="flex items-center gap-2 text-[10px] font-bold text-slate-600 dark:text-slate-300">
-              <i data-lucide="credit-card" size="14"></i>
-              PayPal
+            id="contact-modal"
+            class="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 p-4"
+        >
+            <div
+                class="modal-panel w-full max-w-[340px] rounded-[2rem] transform scale-95 transition-all duration-300 relative shadow-2xl pt-14 pb-10 px-6"
+            >
+                <button
+                    id="close-modal"
+                    class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
+                >
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+                <div class="absolute -top-12 left-1/2 -translate-x-1/2">
+                    <div
+                        class="modal-avatar w-24 h-24 bg-gray-200 rounded-full shadow-lg overflow-hidden"
+                    >
+                        <img src="pfp.png" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <div class="text-center mt-2 mb-8">
+                    <h3
+                        class="text-3xl font-walter font-bold text-[#1a1a1a] tracking-tight mb-1"
+                    >
+                        Noman
+                    </h3>
+                    <p
+                        class="text-xs font-medium text-gray-500 lowercase tracking-wide flex items-center justify-center gap-2"
+                    >
+                        noman
+                        <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
+                        Video / Graphic
+                    </p>
+                    <p
+                        class="text-[10px] font-bold text-slate-400 mt-3 uppercase tracking-wide"
+                    >
+                        You can message me on discord
+                    </p>
+                </div>
+                <div class="space-y-3">
+                    <button
+                        class="copy-item w-full flex items-center justify-between px-4 py-3.5 rounded-xl bg-[#E8EAF6] hover:brightness-95 transition-all border border-[#C5CAE9]"
+                        data-copy="nomanplayzz"
+                    >
+                        <div class="flex items-center gap-3 overflow-hidden">
+                            <!-- DISCORD SVG -->
+                            <svg
+                                class="w-5 h-5"
+                                viewBox="0 -28.5 256 256"
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xlink="http://www.w3.org/1999/xlink"
+                                preserveAspectRatio="xMidYMid"
+                                fill="#000000"
+                            >
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g
+                                    id="SVGRepo_tracerCarrier"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                ></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <path
+                                            d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
+                                            fill="#5865F2"
+                                            fill-rule="nonzero"
+                                        ></path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <span
+                                class="text-sm font-bold text-[#283593] truncate"
+                            >
+                                nomanplayzz
+                            </span>
+                        </div>
+                        <i
+                            data-lucide="copy"
+                            class="text-[#3949AB] w-5 h-5 opacity-50"
+                        ></i>
+                    </button>
+                </div>
+                <div
+                    id="toast"
+                    class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#1a1a1a] text-white px-4 py-2 rounded-full text-xs font-bold opacity-0 transition-opacity shadow-lg pointer-events-none"
+                >
+                    Copied!
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <footer
-    class="py-8 text-center text-xs text-slate-500 dark:text-slate-600 border-t border-slate-200 dark:border-slate-900/50">
-    © 2025 Noman Designs.
-  </footer>
-  <!-- Contact Modal -->
-  <div id="contact-modal"
-    class="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 p-4">
-    <div
-      class="modal-panel w-full max-w-[340px] rounded-[2rem] transform scale-95 transition-all duration-300 relative shadow-2xl pt-14 pb-10 px-6">
-      <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-      <div class="absolute -top-12 left-1/2 -translate-x-1/2">
-        <div class="modal-avatar w-24 h-24 bg-gray-200 rounded-full shadow-lg overflow-hidden">
-          <img src="pfp.png" class="w-full h-full object-cover" />
-        </div>
-      </div>
-      <div class="text-center mt-2 mb-8">
-        <h3 class="text-3xl font-walter font-bold text-[#1a1a1a] tracking-tight mb-1">
-          Noman
-        </h3>
-        <p class="text-xs font-medium text-gray-500 lowercase tracking-wide flex items-center justify-center gap-2">
-          noman
-          <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
-          Video / Graphic
-        </p>
-        <p class="text-[10px] font-bold text-slate-400 mt-3 uppercase tracking-wide">
-          You can message me on discord
-        </p>
-      </div>
-      <div class="space-y-3">
-        <button
-          class="copy-item w-full flex items-center justify-between px-4 py-3.5 rounded-xl bg-[#E8EAF6] hover:brightness-95 transition-all border border-[#C5CAE9]"
-          data-copy="nomanplayzz">
-          <div class="flex items-center gap-3 overflow-hidden">
-            <!-- DISCORD SVG -->
-            <svg class="w-5 h-5" viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg"
-              xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000">
-              <g id="SVGRepo_bgCarrier" stroke-width="0">
-              </g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-              </g>
-              <g id="SVGRepo_iconCarrier">
-                <g>
-                  <path
-                    d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
-                    fill="#5865F2" fill-rule="nonzero">
-                  </path>
-                </g>
-              </g>
-            </svg>
-            <span class="text-sm font-bold text-[#283593] truncate"> nomanplayzz
-            </span>
-          </div>
-          <i data-lucide="copy" class="text-[#3949AB] w-5 h-5 opacity-50"></i>
-        </button>
-      </div>
-      <div id="toast"
-        class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#1a1a1a] text-white px-4 py-2 rounded-full text-xs font-bold opacity-0 transition-opacity shadow-lg pointer-events-none">
-        Copied!
-      </div>
-    </div>
-  </div>
-  <script type="module" src="main.js"></script>
-</body>
-
+        <script type="module" src="main.js"></script>
+    </body>
 </html>
