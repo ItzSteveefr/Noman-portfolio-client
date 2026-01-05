@@ -66,17 +66,17 @@ document.addEventListener("DOMContentLoaded", () => {
       card.className = "review-slide";
       const pfpHtml = r.pfp
         ? `<img src="${r.pfp}" class="w-10 h-10 rounded-full object-cover shadow-lg flex-shrink-0">`
-        : `<div class="w-10 h-10 bg-brand-DEFAULT rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg flex-shrink-0">${r.name.charAt(0)}</div>`;
+        : `<div class="w-10 h-10 bg-brand rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg flex-shrink-0">${r.name.charAt(0)}</div>`;
 
       card.innerHTML = `
                 <div class="flex items-center gap-3 mb-4">
                     ${pfpHtml}
                     <div>
-                        <h4 class="font-bold text-base text-slate-900 dark:text-white">${r.name}</h4>
+                        <h4 class="font-bold text-base text-text-primary">${r.name}</h4>
                         <div class="flex text-yellow-400 text-xs">${"★".repeat(r.stars || 5)}</div>
                     </div>
                 </div>
-                <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium">"${r.text}"</p>
+                <p class="text-sm text-text-secondary leading-relaxed font-medium">"${r.text}"</p>
             `;
       reviewsContainer.appendChild(card);
     });
