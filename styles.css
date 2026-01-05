@@ -213,73 +213,29 @@ body {
     background: #a82a4f;
 }
 
-/* --- CAROUSEL (WORK) --- */
-.carousel-3d-container {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1200px;
-    overflow: visible;
+/* --- WORK GRID --- */
+#work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
-.carousel-item {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-    width: 500px;
+
+.work-item {
     aspect-ratio: 16/9;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.1);
-    background: #e2e8f0;
-    opacity: 0;
-    transform: translateX(0) scale(0.5);
-    z-index: 0;
-    pointer-events: none;
-}
-.dark .carousel-item {
-    background: #000;
-    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    background-color: #e2e8f0;
 }
 
-.item-center {
-    transform: translateX(0) scale(1);
-    z-index: 20;
-    opacity: 1;
-    box-shadow: 0 0 40px -5px rgba(123, 30, 58, 0.15);
-    border: 2px solid #7b1e3a;
-    pointer-events: auto;
+.dark .work-item {
+    background-color: #000;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.4);
 }
-.item-left {
-    transform: translateX(-55%) scale(0.8) rotateY(15deg);
-    z-index: 10;
-    opacity: 0.4;
-    filter: brightness(0.9) blur(1px);
-    cursor: pointer;
-    pointer-events: auto;
-}
-.dark .item-left {
-    filter: brightness(0.4) blur(1px);
-}
-.item-right {
-    transform: translateX(55%) scale(0.8) rotateY(-15deg);
-    z-index: 10;
-    opacity: 0.4;
-    filter: brightness(0.9) blur(1px);
-    cursor: pointer;
-    pointer-events: auto;
-}
-.dark .item-right {
-    filter: brightness(0.4) blur(1px);
-}
-.item-hidden {
-    transform: translateX(0) scale(0.5);
-    opacity: 0;
-    pointer-events: none;
+
+.work-item:hover {
+    transform: scale(1.03);
 }
 
 .nav-arrow-btn {
@@ -384,11 +340,9 @@ body {
     h1.font-walter {
         font-size: 2.5rem !important;
     }
-    .carousel-item {
-        width: 85%;
-    }
-    .carousel-3d-container {
-        height: 280px;
+    #work-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
     }
     .reviews-slider-container {
         height: 350px;
