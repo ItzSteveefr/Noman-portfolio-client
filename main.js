@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const workGrid = document.getElementById("work-grid");
   // To add more images, simply add the filenames to this array
   const MOCK_THUMBNAILS = [
-    "/public/1000157040_imgupscaler.ai_General_8K.jpg",
-    "/public/1000206195_imgupscaler.ai_General_8K.jpg",
-    "/public/1000206207_imgupscaler.ai_General_8K.jpg",
-    "/public/image4.png",
-    "/public/image5.png",
-    "/public/image6.png",
+    "public/1000157040_imgupscaler.ai_General_8K.jpg",
+    "public/1000206195_imgupscaler.ai_General_8K.jpg",
+    "public/1000206207_imgupscaler.ai_General_8K.jpg",
+    "public/1000086162_imgupscaler.ai_Beta_2K.jpg",
+    "public/1000142058_imgupscaler.ai_General_8K.jpg",
+    "public/1000144771_imgupscaler.ai_V1(Fast)_4K.png.jpg",
   ];
 
   if (workGrid) {
@@ -31,31 +31,31 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Crxyon_",
       text: "High-quality thumbnail delivered within a short time frame. Great attention to detail and overall finish.",
       stars: 5,
-      pfp: "public/Untitled69.jpg",
+      pfp: "public/crayon.png",
     },
     {
       name: "ZeorPlayzX",
       text: "Extremely professional design with eye-catching colors and perfect text placement. The video vibe was crystal clear.",
       stars: 5,
-      pfp: "public/Untitled69.jpg",
+      pfp: "public/zayor.png",
     },
     {
       name: "Craftopia Conqueror",
       text: "Outstanding thumbnail quality with very fast delivery. One of the best thumbnail creators I’ve seen.",
       stars: 5,
-      pfp: "public/Untitled69.jpg",
+      pfp: "public/Craftopia.png",
     },
     {
       name: "MrScaft",
       text: "Creative and impressive work that clearly stands out. Loved the final result.",
       stars: 5,
-      pfp: "public/Untitled69.jpg",
+      pfp: "public/mrscaft.png",
     },
     {
       name: "SAMAR YT",
       text: "Quick delivery with excellent animation quality. Strong teamwork and solid execution.",
       stars: 5,
-      pfp: "public/Untitled69.jpg",
+      pfp: "public/=last.png",
     },
   ];
 
