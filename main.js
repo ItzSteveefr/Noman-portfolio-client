@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Thumbnail Grid Logic
   const workGrid = document.getElementById("work-grid");
+  const loadMoreBtn = document.getElementById("load-more-btn");
   // To add more images, simply add the filenames to this array
   const MOCK_THUMBNAILS = [
     "1000157040_imgupscaler.ai_General_8K.jpg",
@@ -9,18 +10,49 @@ document.addEventListener("DOMContentLoaded", () => {
     "1000086162_imgupscaler.ai_Beta_2K.jpg",
     "1000142058_imgupscaler.ai_General_8K.jpg",
     "1000144771_imgupscaler.ai_V1(Fast)_4K.png.jpg",
+    "1000157040_imgupscaler.ai_General_8K.jpg",
+    "1000206195_imgupscaler.ai_General_8K.jpg",
+    "1000206207_imgupscaler.ai_General_8K.jpg",
+    "1000086162_imgupscaler.ai_Beta_2K.jpg",
+    "1000142058_imgupscaler.ai_General_8K.jpg",
+    "1000144771_imgupscaler.ai_V1(Fast)_4K.png.jpg",
+    "1000157040_imgupscaler.ai_General_8K.jpg",
+    "1000206195_imgupscaler.ai_General_8K.jpg",
+    "1000206207_imgupscaler.ai_General_8K.jpg",
+    "1000086162_imgupscaler.ai_Beta_2K.jpg",
+    "1000142058_imgupscaler.ai_General_8K.jpg",
+    "1000144771_imgupscaler.ai_V1(Fast)_4K.png.jpg",
   ];
 
-  if (workGrid) {
+  const ITEMS_PER_PAGE = 6;
+  let currentPage = 0;
+
+  function loadWorkItems() {
+    const startIndex = currentPage * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const itemsToLoad = MOCK_THUMBNAILS.slice(startIndex, endIndex);
+
+    itemsToLoad.forEach((src) => {
+      const el = document.createElement("div");
+      el.className = "work-item";
+      el.innerHTML = `<img src="public/${src}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1280x720/000000/FFF?text=Image+Error'">`;
+      workGrid.appendChild(el);
+    });
+
+    currentPage++;
+
+    if (currentPage * ITEMS_PER_PAGE >= MOCK_THUMBNAILS.length) {
+      loadMoreBtn.style.display = "none";
+    }
+  }
+
+  if (workGrid && loadMoreBtn) {
     if (MOCK_THUMBNAILS.length > 0) {
-      MOCK_THUMBNAILS.forEach((src) => {
-        const el = document.createElement("div");
-        el.className = "work-item";
-        el.innerHTML = `<img src="public/${src}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1280x720/000000/FFF?text=Image+Error'">`;
-        workGrid.appendChild(el);
-      });
+      loadWorkItems();
+      loadMoreBtn.addEventListener("click", loadWorkItems);
     } else {
       workGrid.innerHTML = `<p class="text-slate-500 dark:text-slate-400 font-walter text-center col-span-full">No images to display.</p>`;
+      loadMoreBtn.style.display = "none";
     }
   }
 

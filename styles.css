@@ -361,6 +361,10 @@ body {
     font-family: "Walter Turncoat", cursive;
 }
 
+.icon-14 {
+    font-size: 14px;
+}
+
 /* --- RESPONSIVE ADJUSTMENTS --- */
 @media (max-width: 768px) {
     .nav-pill {
