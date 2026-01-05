@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const workGrid = document.getElementById("work-grid");
   // To add more images, simply add the filenames to this array
   const MOCK_THUMBNAILS = [
-    "public/1000157040_imgupscaler.ai_General_8K.jpg",
-    "public/1000206195_imgupscaler.ai_General_8K.jpg",
-    "public/1000206207_imgupscaler.ai_General_8K.jpg",
-    "public/1000086162_imgupscaler.ai_Beta_2K.jpg",
-    "public/1000142058_imgupscaler.ai_General_8K.jpg",
-    "public/1000144771_imgupscaler.ai_V1(Fast)_4K.png.jpg",
+    "1000157040_imgupscaler.ai_General_8K.jpg",
+    "1000206195_imgupscaler.ai_General_8K.jpg",
+    "1000206207_imgupscaler.ai_General_8K.jpg",
+    "1000086162_imgupscaler.ai_Beta_2K.jpg",
+    "1000142058_imgupscaler.ai_General_8K.jpg",
+    "1000144771_imgupscaler.ai_V1(Fast)_4K.png.jpg",
   ];
 
   if (workGrid) {
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Craftopia Conqueror",
       text: "Outstanding thumbnail quality with very fast delivery. One of the best thumbnail creators I’ve seen.",
       stars: 5,
-      pfp: "public/Craftopia.png",
+      pfp: "public/craftopia.png",
     },
     {
       name: "MrScaft",
