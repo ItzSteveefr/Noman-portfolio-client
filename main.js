@@ -74,20 +74,32 @@ onValue(reviewsRef, (snapshot) => {
     // Dummy Reviews
     reviews = [
       {
-        name: "Alex K.",
-        text: "Noman totally transformed my channel art. CTR went up by 20% in a week!",
+        name: "Crxyon_",
+        text: "High-quality thumbnail delivered within a short time frame. Great attention to detail and overall finish.",
         stars: 5,
         pfp: "",
       },
       {
-        name: "CraftyMike",
-        text: "Fastest delivery I've ever seen for this quality. Highly recommended.",
+        name: "ZeorPlayzX",
+        text: "Extremely professional design with eye-catching colors and perfect text placement. The video vibe was crystal clear.",
         stars: 5,
         pfp: "",
       },
       {
-        name: "SarahDev",
-        text: "Super chill to work with and understood exactly what I needed.",
+        name: "Craftopia Conqueror",
+        text: "Outstanding thumbnail quality with very fast delivery. One of the best thumbnail creators I’ve seen.",
+        stars: 5,
+        pfp: "",
+      },
+      {
+        name: "MrScaft",
+        text: "Creative and impressive work that clearly stands out. Loved the final result.",
+        stars: 5,
+        pfp: "",
+      },
+      {
+        name: "SAMAR YT",
+        text: "Quick delivery with excellent animation quality. Strong teamwork and solid execution.",
         stars: 5,
         pfp: "",
       },
@@ -121,7 +133,7 @@ onValue(reviewsRef, (snapshot) => {
 lucide.createIcons();
 
 // 1. ROBUST LOADING LOGIC
-const textToType = "Noman...";
+const textToType = "NomanPlayzz...";
 const typingElement = document.getElementById("typing-text");
 let charIndex = 0;
 
