@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     itemsToLoad.forEach((src) => {
       const el = document.createElement("div");
       el.className = "work-item";
-      el.innerHTML = `<img src="public/${src}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1280x720/000000/FFF?text=Image+Error'">`;
+      el.innerHTML = `<img src="/${src}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1280x720/000000/FFF?text=Image+Error'">`;
       workGrid.appendChild(el);
     });
 
@@ -78,31 +78,31 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Crxyon_",
       text: "High-quality thumbnail delivered within a short time frame. Great attention to detail and overall finish.",
       stars: 5,
-      pfp: "public/crayon.png",
+      pfp: "/crayon.png",
     },
     {
       name: "ZeorPlayzX",
       text: "Extremely professional design with eye-catching colors and perfect text placement. The video vibe was crystal clear.",
       stars: 5,
-      pfp: "public/zayor.png",
+      pfp: "/zayor.png",
     },
     {
       name: "Craftopia Conqueror",
       text: "Outstanding thumbnail quality with very fast delivery. One of the best thumbnail creators I’ve seen.",
       stars: 5,
-      pfp: "public/craftopia.png",
+      pfp: "/craftopia.png",
     },
     {
       name: "MrScaft",
       text: "Creative and impressive work that clearly stands out. Loved the final result.",
       stars: 5,
-      pfp: "public/mrscaft.png",
+      pfp: "/mrscaft.png",
     },
     {
       name: "SAMAR YT",
       text: "Quick delivery with excellent animation quality. Strong teamwork and solid execution.",
       stars: 5,
-      pfp: "public/samar.png",
+      pfp: "/samar.png",
     },
   ];
 
