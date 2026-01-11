@@ -37,6 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
     "31.jpg",
     "32.jpg",
     "33.jpg",
+    "34.jpg",
+    "35.jpg",
+    "36.jpg",
+    "37.jpg",
+    "38.jpg"
   ];
 
   const ITEMS_PER_PAGE = 6;
